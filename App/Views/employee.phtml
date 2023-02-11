@@ -1,0 +1,28 @@
+<h1>Liste des employés</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Numéro</th>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Bureau</th>
+            <th>Fonction</th>
+            <th>Manager</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($employees as $employee): ?>
+            <tr>
+                <td><a href="?page=employee-detail?id=<?= htmlspecialchars($employee['employeeNumber']) ?>"><?= htmlspecialchars($employee['employeeNumber']) ?></a></td>
+                <td><?= htmlspecialchars($employee['firstName']) ?></td>
+                <td><?= htmlspecialchars($employee['lastName']) ?></td>
+                <td><?= htmlspecialchars($employee['email']) ?></td>
+                <td><?= htmlspecialchars($employee['city']) ?></td>
+                <td><?= htmlspecialchars($employee['jobTitle']) ?></td>
+                <td><?= htmlspecialchars($employee['managerFirstName']) ?> <?= htmlspecialchars($employee['managerLastName']) ?></td>
+            </tr>
+        <?php endforeach ?>
+    </tbody>
+</table>
