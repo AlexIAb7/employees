@@ -13,11 +13,9 @@ class EmployeeModel
     */
     public function getAllEmployees(): array
     {
-        //Connexion à la BDD
         $connection = new Connection();
         $db = $connection->getPdo();
          
-        //Récupération des clients
         $query = $db->prepare(
             'SELECT emp.employeeNumber, emp.lastName, emp.firstName, emp.email, emp.jobTitle, off.city, man.firstName AS managerFirstName, man.lastName AS managerLastName
             FROM employees emp 

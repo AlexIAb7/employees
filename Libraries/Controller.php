@@ -6,7 +6,7 @@ class Controller
 {
     public function render(string $viewName, array $data = []): void
     {
-        // On crée des variables à partir du tableau $data
+        // Crée des variables à partir du tableau $data
         extract($data);
         
         $template = $viewName;

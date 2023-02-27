@@ -23,8 +23,5 @@ class CustomerController extends Controller
         if (! isset($_GET['id'])) {
             $this->redirect('home');
         }
-        
-        // Demande au modèle qui gère les clients les informations n°id
-        // Affichage du détail du client correspondant
     }
 }

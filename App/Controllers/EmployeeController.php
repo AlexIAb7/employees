@@ -9,7 +9,6 @@ class EmployeeController extends Controller
 {
     public function showListEmployees(): void
     {
-        //Afficher la liste des employés
         $model = new EmployeeModel();
         $employees = $model->getAllEmployees();
         
@@ -22,7 +21,6 @@ class EmployeeController extends Controller
     
     public function showDetailEmployee():void
     {
-        //Affiche le détail d'un employé selon l'id
         $model = new EmployeeModel();
         $employee = $model->getDetailsEmployee();
         
@@ -34,7 +32,6 @@ class EmployeeController extends Controller
         }
         $this->render('detail_employee.phtml', [
             'employee' => $employee
-        ]);
-        
+        ]);  
     }
 }

@@ -13,11 +13,9 @@ class CustomerModel
      */
     public function getAll(): array
     {
-        // Connexion à la base de données
         $connection = new Connection();
         $db = $connection->getPdo();
         
-        // Récupération des clients
         $query = $db->prepare(
             'SELECT customerNumber, customerName, phone, addressLine1, city, country, postalCode
             FROM customers
